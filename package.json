@@ -1,12 +1,12 @@
 {
-  "name": "@playwright/mcp",
-  "version": "0.0.15",
-  "description": "Playwright Tools for MCP",
+  "name": "@amitdeshmukh/playwright-mcp",
+  "version": "1.0.0",
+  "description": "Playwright Tools for MCP - Forked from @playwright/mcp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/microsoft/playwright-mcp.git"
+    "url": "git+https://github.com/amitdeshmukh/playwright-mcp.git"
   },
-  "homepage": "https://playwright.dev",
+  "homepage": "https://github.com/amitdeshmukh/playwright-mcp#readme",
   "engines": {
     "node": ">=18"
   },
