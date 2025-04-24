@@ -1,5 +1,11 @@
 ## Playwright MCP
 
+This is a fork of the original [Playwright MCP](https://github.com/microsoft/playwright-mcp) with the following changes:
+ - Add _persistentContext property to store and reuse browser context
+ - Cache and reuse existing persistent context if available. This ensures subsequent tool calls do not fail with the error Failed to create a ProcessSingleton for your profile directory
+ - Improve browser context management to allow launching multiple browser use sessions in parallel
+
+
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
 ### Key Features
