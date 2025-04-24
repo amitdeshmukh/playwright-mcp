@@ -1,5 +1,5 @@
 {
-  "name": "@amitdeshmukh/playwright-mcp",
+  "name": "@ax-crew/playwright-mcp",
   "version": "1.0.0",
   "description": "Playwright Tools for MCP - Forked from @playwright/mcp",
   "repository": {

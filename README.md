@@ -31,7 +31,7 @@ A Model Context Protocol (MCP) server that provides browser automation capabilit
     "playwright": {
       "command": "npx",
       "args": [
-        "@amitdeshmukh/playwright-mcp@latest"
+        "@ax-crew/playwright-mcp@latest"
       ]
     }
   }
@@ -44,7 +44,7 @@ Install the Playwright MCP server in VS Code using one of these buttons:
 
 <!--
 // Generate using?:
-const config = JSON.stringify({ name: 'playwright', command: 'npx', args: ["-y", "@amitdeshmukh/playwright-mcp@latest"] });
+const config = JSON.stringify({ name: 'playwright', command: 'npx', args: ["-y", "@ax-crew/playwright-mcp@latest"] });
 const urlForWebsites = `vscode:mcp/install?${encodeURIComponent(config)}`;
 // Github markdown does not allow linking to `vscode:` directly, so you can use our redirect:
 const urlForGithub = `https://insiders.vscode.dev/redirect?url=${encodeURIComponent(urlForWebsites)}`;
@@ -56,12 +56,12 @@ Alternatively, you can install the Playwright MCP server using the VS Code CLI:
 
 ```bash
 # For VS Code
-code --add-mcp '{"name":"playwright","command":"npx","args":["@amitdeshmukh/playwright-mcp@latest"]}'
+code --add-mcp '{"name":"playwright","command":"npx","args":["@ax-crew/playwright-mcp@latest"]}'
 ```
 
 ```bash
 # For VS Code Insiders
-code-insiders --add-mcp '{"name":"playwright","command":"npx","args":["@amitdeshmukh/playwright-mcp@latest"]}'
+code-insiders --add-mcp '{"name":"playwright","command":"npx","args":["@ax-crew/playwright-mcp@latest"]}'
 ```
 
 After installation, the Playwright MCP server will be available for use with your GitHub Copilot agent in VS Code.
@@ -106,7 +106,7 @@ This mode is useful for background or batch operations.
     "playwright": {
       "command": "npx",
       "args": [
-        "@amitdeshmukh/playwright-mcp@latest",
+        "@ax-crew/playwright-mcp@latest",
         "--headless"
       ]
     }
@@ -120,7 +120,7 @@ When running headed browser on system w/o display or from worker processes of th
 run the MCP server from environment with the DISPLAY and pass the `--port` flag to enable SSE transport.
 
 ```bash
-npx @amitdeshmukh/playwright-mcp@latest --port 8931
+npx @ax-crew/playwright-mcp@latest --port 8931
 ```
 
 And then in MCP client config, set the `url` to the SSE endpoint:
@@ -138,7 +138,7 @@ And then in MCP client config, set the `url` to the SSE endpoint:
 When running in a remote server, you can use the `--host` flag to bind the server to `0.0.0.0` to make it accessible from outside.
 
 ```bash
-npx @amitdeshmukh/playwright-mcp@latest --port 8931 --host 0.0.0.0`
+npx @ax-crew/playwright-mcp@latest --port 8931 --host 0.0.0.0`
 ```
 
 In MCP client config, `$server-ip` is the IP address of the server:
@@ -182,7 +182,7 @@ To use Vision Mode, add the `--vision` flag when starting the server:
     "playwright": {
       "command": "npx",
       "args": [
-        "@amitdeshmukh/playwright-mcp@latest",
+        "@ax-crew/playwright-mcp@latest",
         "--vision"
       ]
     }
@@ -205,7 +205,7 @@ docker build -t mcp/playwright .
 ```js
 import http from 'http';
 
-import { createServer } from '@amitdeshmukh/playwright-mcp';
+import { createServer } from '@ax-crew/playwright-mcp';
 import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
 
 http.createServer(async (req, res) => {
